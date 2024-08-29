@@ -53,7 +53,7 @@ const Main = ({ children, className, id }: MainProps) => {
         "prose-blockquote:not-italic",
         // Pre and Code Blocks
         "prose-pre:border prose-pre:bg-muted/25 prose-pre:text-foreground",
-        className
+        className,
       )}
       id={id}
     >
@@ -126,7 +126,7 @@ const Article = ({
         "prose-blockquote:not-italic",
         // Pre and Code Blocks
         "prose-pre:border prose-pre:bg-muted/25",
-        className
+        className,
       )}
       id={id}
     >
