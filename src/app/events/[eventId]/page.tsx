@@ -52,7 +52,7 @@ export default async function Page({
             </div>
             <Link href={evento?.eventHref!}>
               <div className="my-4 relative flex items-center justify-center p-4 rounded-[30px] border border-gray-300">
-                {evento?.CTA}
+                {evento?.CTA ? evento?.CTA : "Registrate ya!"}
                 <BorderBeam size={50} />
               </div>
             </Link>
