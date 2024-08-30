@@ -33,9 +33,7 @@ export default function Page() {
               <p>
                 Este es un proyecto open source, si deseas puedes contribuir :),
                 en la v2 mejoraremos el SEO, puedes conocer más al respecto{" "}
-                <Link href={"https://github.com/Edartruwu/all-events"}>
-                  Aqui!
-                </Link>
+                <Link href={"/events"}>Aqui!</Link>
               </p>
             </Balancer>
           </div>
