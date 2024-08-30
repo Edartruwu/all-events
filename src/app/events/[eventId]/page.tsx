@@ -2,11 +2,13 @@ import { BorderBeam } from "@/components/border";
 import { Container, Main, Section, Article } from "@/components/craft";
 import { GetEventById } from "@/server/getEventById";
 import { YouTubeEmbed } from "@next/third-parties/google";
-import Balancer from "react-wrap-balancer";
 import Link from "next/link";
 import { ParseDate } from "@/lib/dates";
 
-function extractYouTubeVideoId(iframe: string): string | null {
+function extractYouTubeVideoId(iframe: string | null): string | null {
+  if (typeof iframe !== "string") {
+    return null;
+  }
   const videoIdMatch = iframe.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/);
   return videoIdMatch ? videoIdMatch[1] : null;
 }
