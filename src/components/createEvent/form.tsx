@@ -70,7 +70,7 @@ const formSchema = z.object({
     message: "Ingresa una hora de comienzo para tu evento",
   }),
   place: z
-    .string({ message: "Ingresa un link de google maps!" })
+    .string({ message: "Ingresa un link de google maps o link virtual!" })
     .url({ message: "Ingresa una url valida" }),
   CTA: z.string().max(25).optional(),
   videoId: youtubeEmbedIframeSchema.optional(),
@@ -134,7 +134,7 @@ export default function CreateEventForm() {
               </FormControl>
               <FormDescription>
                 Proporciona una descripción detallada, incluyendo la temática y
-                el formato del evento.
+                el formato del evento. Recuerda que soportamos formato Markdown!
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -203,7 +203,7 @@ export default function CreateEventForm() {
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={(date) =>
-                      date > new Date() || date < new Date("1900-01-01")
+                      date < new Date() || date < new Date("1900-01-01")
                     }
                     initialFocus
                   />
@@ -242,7 +242,8 @@ export default function CreateEventForm() {
                 <Input placeholder="https://googlemaps...." {...field} />
               </FormControl>
               <FormDescription>
-                Indica el lugar del evento utilizando una url de google maps.
+                Indica el lugar del evento utilizando una url de google maps en
+                el caso de que sea virtual, pon el link de la reunión.
               </FormDescription>
               <FormMessage />
             </FormItem>

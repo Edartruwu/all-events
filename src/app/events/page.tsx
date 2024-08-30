@@ -11,7 +11,7 @@ export default async function Page() {
     <Main>
       <Section>
         <Container>
-          <h1>Todos los eventos del ecosistema!</h1>
+          <h1>Todos los eventos del ecosistema emprendedor!</h1>
           <div className="flex flex-col gap-6">
             <div className="w-fit p-3 rounded-3xl border border-gray-300 backdrop-blur-sm">
               <CreateEventButton />
