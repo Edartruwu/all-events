@@ -1,6 +1,10 @@
 import { Container, Main, Section } from "@/components/craft";
 
-export default function Page({ params }: { params: { eventId: string } }) {
+export default async function Page({
+  params,
+}: {
+  params: { eventId: string };
+}) {
   return (
     <Main>
       <Section>
