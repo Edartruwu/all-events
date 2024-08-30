@@ -4,19 +4,7 @@ import { ColumnDef } from "@tanstack/react-table";
 import { Events } from "@prisma/client";
 import Link from "next/link";
 import { buttonVariants } from "../ui/button";
-import { format, isValid, parseISO } from "date-fns";
-import { es } from "date-fns/locale/es";
-
-export function parseDate(initialDate: Date): string {
-  const isoDateString = initialDate.toISOString();
-  const parsedDate = parseISO(isoDateString);
-
-  if (isValid(parsedDate)) {
-    return format(parsedDate, "dd 'de' MMMM 'de' yyyy", { locale: es });
-  }
-
-  return ""; // Return an empty string if the date is invalid
-}
+import { ParseDate } from "@/lib/dates";
 
 export const columns: ColumnDef<Events>[] = [
   {
@@ -30,7 +18,7 @@ export const columns: ColumnDef<Events>[] = [
   {
     accessorKey: "startingDate",
     header: "Fecha:",
-    cell: ({ row }) => <p>{parseDate(row.original.startingDate)}</p>,
+    cell: ({ row }) => <p>{ParseDate(row.original.startingDate)}</p>,
   },
   {
     accessorKey: "startingHour",

@@ -6,6 +6,7 @@ import { PartyPopper } from "lucide-react";
 
 import { Section, Container } from "@/components/craft";
 import { Button } from "@/components/ui/button";
+import { BorderBeam } from "./border";
 
 export default function Hero() {
   return (
@@ -13,11 +14,11 @@ export default function Hero() {
       <Container className="flex flex-col items-center text-center">
         <div className="flex flex-col items-center text-center p-3 rounded-[12px] border border-gray-300 bg-none backdrop-blur-sm">
           <Image
-            src={"next.svg"}
-            width={172}
-            height={72}
+            src={"/AllEventsLogo.svg"}
+            width={244}
+            height={144}
             alt="main logo"
-            className="not-prose mb-6 dark:invert md:mb-8 pt-5"
+            className="object-cover not-prose mb-6 dark:invert md:mb-8 pt-5"
           />
           <h1 className="!mb-0">
             <Balancer>
@@ -31,6 +32,7 @@ export default function Hero() {
               link!
             </Balancer>
           </h3>
+          <BorderBeam size={300} borderWidth={3} />
         </div>
         <div className="not-prose mt-6 flex gap-2 md:mt-12">
           <Button asChild>

@@ -6,7 +6,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
+import { BorderBeam } from "../border";
 import CreateEventForm from "./form";
 
 export default function CreateEventButton() {
